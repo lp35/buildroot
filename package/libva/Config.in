@@ -15,5 +15,15 @@ config BR2_PACKAGE_LIBVA
 
 	  https://01.org/linuxmedia/vaapi
 
+if BR2_PACKAGE_LIBVA
+
+config BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION
+    bool "Use Intel MediaSDK compatible version"
+    help
+        This enable Intel MediaSDK compatible libva, allowing driver compilation
+        for libmfx usage for instance.
+
+endif
+
 comment "libva needs a toolchain w/ threads, dynamic library"
 	depends on !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS
