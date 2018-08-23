@@ -4,13 +4,31 @@
 #
 ################################################################################
 
+ifeq ($(BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION),y)
+LIBVA_VERSION = d6fd111e2062bb4732db8a05ed55fc01771087b4
+LIBVA_SITE = git://github.com/intel/libva.git
+LIBVA_SITEMETHOD = git
+else
 LIBVA_VERSION = 2.0.0
 LIBVA_SOURCE = libva-$(LIBVA_VERSION).tar.bz2
 LIBVA_SITE = https://github.com/01org/libva/releases/download/$(LIBVA_VERSION)
+endif
+
 LIBVA_LICENSE = MIT
 LIBVA_LICENSE_FILES = COPYING
 LIBVA_INSTALL_STAGING = YES
 LIBVA_DEPENDENCIES = host-pkgconf libdrm
+
+ifeq ($(BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION),y)
+define LIBVA_PRE_CONFIGURE_FIXM4
+	# Fix for m4 directory creation.
+	mkdir -p $(@D)/m4
+endef
+
+LIBVA_PRE_CONFIGURE_HOOKS += LIBVA_PRE_CONFIGURE_FIXM4
+LIBVA_AUTORECONF = YES
+endif
+
 
 # libdrm is a hard-dependency
 LIBVA_CONF_OPTS = \
