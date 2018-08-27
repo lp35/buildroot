@@ -17,11 +17,12 @@ config BR2_PACKAGE_LIBVA
 
 if BR2_PACKAGE_LIBVA
 
-config BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION
-    bool "Use Intel MediaSDK compatible version"
-    help
-        This enable Intel MediaSDK compatible libva, allowing driver compilation
-        for libmfx usage for instance.
+config BR2_PACKAGE_LIBVA_INTEL_QSV
+	bool "Use Intel(R) QuickSync Video compatible version"
+	depends on BR2_x86_64
+	help
+	  Use Intel(R)'s custom version of libva that enables Intel QuickSync 
+	  Video encoding/decoding feature on Intel(R) processors.
 
 endif
 
