@@ -4,9 +4,17 @@
 #
 ################################################################################
 
+ifeq ($(BR2_PACKAGE_FFMPEG_QSV),y)
+FFMPEG_VERSION = qsv-3.4.1.0
+FFMPEG_SOURCE = $(FFMPEG_VERSION).tar.gz
+FFMPEG_SITE = https://github.com/Intel-FFmpeg-Plugin/Intel_FFmpeg_plugins/archive
+else
 FFMPEG_VERSION = 3.4.4
 FFMPEG_SOURCE = ffmpeg-$(FFMPEG_VERSION).tar.xz
 FFMPEG_SITE = http://ffmpeg.org/releases
+endif
+
+
 FFMPEG_INSTALL_STAGING = YES
 
 FFMPEG_LICENSE = LGPL-2.1+, libjpeg license
@@ -358,7 +366,7 @@ else
 FFMPEG_CONF_OPTS += --disable-iconv
 endif
 
-ifeq ($(BR2_PACKAGE_INTEL_MEDIASDK),y)
+ifeq ($(BR2_PACKAGE_FFMPEG_QSV),y)
 FFMPEG_CONF_OPTS += --enable-libmfx
 FFMPEG_DEPENDENCIES += intel-mediasdk
 else

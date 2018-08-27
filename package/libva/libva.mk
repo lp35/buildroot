@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-ifeq ($(BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION),y)
+ifeq ($(BR2_PACKAGE_LIBVA_INTEL_QSV),y)
 LIBVA_VERSION = d6fd111e2062bb4732db8a05ed55fc01771087b4
 LIBVA_SITE = git://github.com/intel/libva.git
 LIBVA_SITEMETHOD = git
@@ -19,7 +19,7 @@ LIBVA_LICENSE_FILES = COPYING
 LIBVA_INSTALL_STAGING = YES
 LIBVA_DEPENDENCIES = host-pkgconf libdrm
 
-ifeq ($(BR2_PACKAGE_LIBVA_INTEL_MEDIASDK_VERSION),y)
+ifeq ($(BR2_PACKAGE_LIBVA_INTEL_QSV),y)
 define LIBVA_PRE_CONFIGURE_FIXM4
 	# Fix for m4 directory creation.
 	mkdir -p $(@D)/m4
