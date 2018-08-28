@@ -1,0 +1,10 @@
+diff --git a/Source/GmmLib/CMakeLists.txt b/Source/GmmLib/CMakeLists.txt
+index 37c799d..427bad3 100644
+--- a/Source/GmmLib/CMakeLists.txt
++++ b/Source/GmmLib/CMakeLists.txt
+@@ -544,4 +544,4 @@ if(ARCH EQUAL 32)
+ 	endif()
+ endif()
+ 
+-add_subdirectory(ULT)
++# add_subdirectory(ULT)

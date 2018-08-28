@@ -184,7 +184,7 @@ config BR2_PACKAGE_FFMPEG_QSV
 	depends on BR2_PACKAGE_INTEL_MEDIASDK
 	default n
 
-comment "Intel(R) QuickSync support needs Intel MediaSDK"
+comment "Intel(R) QuickSync support needs intel-mediasdk"
 	depends on !BR2_PACKAGE_INTEL_MEDIASDK
 
 config BR2_PACKAGE_FFMPEG_EXTRACONF

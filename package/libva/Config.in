@@ -18,11 +18,16 @@ config BR2_PACKAGE_LIBVA
 if BR2_PACKAGE_LIBVA
 
 config BR2_PACKAGE_LIBVA_INTEL_QSV
-	bool "Use Intel(R) QuickSync Video compatible version"
+	bool "Intel(R) QuickSync Video support version"
 	depends on BR2_x86_64
+	depends on BR2_TOOLCHAIN_USES_GLIBC
+	depends on BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_14
 	help
 	  Use Intel(R)'s custom version of libva that enables Intel QuickSync 
 	  Video encoding/decoding feature on Intel(R) processors.
+
+comment "Intel(R) QuickSync Video support needs a glibc toolchain and GNU/Linux Kernel >= 4.14 at least"
+    depends on !BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_14 || !BR2_TOOLCHAIN_USES_GLIBC
 
 endif
 
