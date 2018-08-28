@@ -1,0 +1,13 @@
+diff --git a/media_driver/linux/ult/CMakeLists.txt b/media_driver/linux/ult/CMakeLists.txt
+index 2fac051..fbfbc29 100644
+--- a/media_driver/linux/ult/CMakeLists.txt
++++ b/media_driver/linux/ult/CMakeLists.txt
+@@ -44,7 +44,7 @@ else ()
+ endif ()
+ 
+ add_subdirectory(libdrm_mock)
+-add_subdirectory(ult_app)
++#add_subdirectory(ult_app)
+ 
+ enable_testing()
+ add_test(NAME test_devult COMMAND devult ${UMD_PATH})

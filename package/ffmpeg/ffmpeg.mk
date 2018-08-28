@@ -364,7 +364,7 @@ ifeq ($(BR2_PACKAGE_FFMPEG_QSV),y)
 FFMPEG_CONF_OPTS += --enable-libmfx
 FFMPEG_DEPENDENCIES += intel-mediasdk
 else
-FFMPEG_CONF_OPTS += --disable-ibmfx
+FFMPEG_CONF_OPTS += --disable-libmfx
 endif
 
 # ffmpeg freetype support require fenv.h which is only

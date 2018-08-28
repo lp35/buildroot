@@ -1,0 +1,15 @@
+config BR2_PACKAGE_INTEL_MEDIASDK
+	bool "intel-mediasdk"
+	depends on BR2_x86_64
+    depends on BR2_PACKAGE_INTEL_MEDIADRIVER
+    select BR2_PACKAGE_LIBDRM
+    select BR2_PACKAGE_LIBDRM_INTEL
+    help
+        Intel(R) Media SDK provides an API to access hardware-accelerated video 
+        decode, encode and filtering on Intel® platforms with integrated 
+        graphics.
+
+        Supported video encoders: HEVC, AVC, MPEG-2, JPEG
+        Supported Video decoders: HEVC, AVC, VP8, MPEG-2, VC1, JPEG
+        Supported video pre-processing filters: Color Conversion, Deinterlace, 
+        Denoise, Resize, Rotate, Composition

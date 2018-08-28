@@ -1,0 +1,9 @@
+prefix=/opt/intel/mediasdk
+exec_prefix=${prefix}
+libdir=${prefix}/lib/lin_x64
+includedir=${prefix}/include
+Name: libmfx
+Description: Intel Media Server Studio SDK
+Version: 2018
+Libs: -L${libdir} -lmfx -lva -lstdc++ -ldl -lva-drm -ldrm
+Cflags: -I${includedir} -I/usr/include/libdrm
