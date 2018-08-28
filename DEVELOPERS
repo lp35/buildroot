@@ -1971,3 +1971,8 @@ F:	package/qjson/
 F:	package/quazip/
 F:	package/shapelib/
 F:	package/tinc/
+
+N: Louis-Paul Cordier <lpdev@cordier.org>
+F:  package/intel-gmmlib
+F:  package/intel-mediadriver
+F:  package/intel-mediasdk
