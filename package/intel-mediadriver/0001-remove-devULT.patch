@@ -1,3 +1,7 @@
+Remove runtime tests for intel-mediadriver.
+
+Signed-off-by: Louis-Paul Cordier <lpdev@cordier.org>
+
 diff --git a/media_driver/linux/ult/CMakeLists.txt b/media_driver/linux/ult/CMakeLists.txt
 index 2fac051..fbfbc29 100644
 --- a/media_driver/linux/ult/CMakeLists.txt

@@ -29,7 +29,6 @@ LIBVA_PRE_CONFIGURE_HOOKS += LIBVA_PRE_CONFIGURE_FIXM4
 LIBVA_AUTORECONF = YES
 endif
 
-
 # libdrm is a hard-dependency
 LIBVA_CONF_OPTS = \
 	--enable-drm \
