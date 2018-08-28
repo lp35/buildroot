@@ -1,3 +1,9 @@
+################################################################################
+#
+# intel-mediadriver
+#
+################################################################################
+
 INTEL_MEDIADRIVER_VERSION = ab264dd51f20ea83d6c40a886fb685ce372c47ba
 INTEL_MEDIADRIVER_SITE = git://github.com/intel/media-driver.git
 INTEL_MEDIADRIVER_LICENSE = MIT BSD-3-Clause
@@ -12,7 +18,6 @@ INTEL_MEDIADRIVER_DEPENDENCIES += libpciaccess
 
 INTEL_MEDIADRIVER_SUBDIR = media_driver
 INTEL_MEDIADRIVER_SUPPORTS_IN_SOURCE_BUILD = NO
-
 
 INTEL_MEDIADRIVER_CONF_OPTS += -DMEDIA_VERSION="2.0.0"\
 	-DBUILD_ALONG_WITH_CMRTLIB=1 \

@@ -1,3 +1,7 @@
+Remove runtime tests for gmmlib.
+
+Signed-off-by: Louis-Paul Cordier <lpdev@cordier.org>
+
 diff --git a/Source/GmmLib/CMakeLists.txt b/Source/GmmLib/CMakeLists.txt
 index 37c799d..427bad3 100644
 --- a/Source/GmmLib/CMakeLists.txt

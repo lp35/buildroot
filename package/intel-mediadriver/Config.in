@@ -1,17 +1,18 @@
 config BR2_PACKAGE_INTEL_MEDIADRIVER
-    bool "intel-mediadriver"
-    depends on BR2_x86_64
-    depends on BR2_PACKAGE_LIBVA_INTEL_QSV
-    depends on BR2_PACKAGE_XLIB_LIBX11
-    select BR2_PACKAGE_INTEL_GMMLIB
-    select BR2_PACKAGE_LIBPCIACCESS
-    help
-       The Intel(R) Media Driver for VAAPI is a new VA-API (Video Acceleration 
-       API) user mode driver supporting hardware accelerated decoding, encoding, 
-       and video post processing for GEN based graphics hardware.
+	bool "intel-mediadriver"
+	depends on BR2_x86_64
+	depends on BR2_PACKAGE_LIBVA_INTEL_QSV
+	depends on BR2_PACKAGE_XLIB_LIBX11
+	select BR2_PACKAGE_INTEL_GMMLIB
+	select BR2_PACKAGE_LIBPCIACCESS
+	help
+	  The Intel(R) Media Driver for VAAPI is a new VA-API (Video
+	  Acceleration API) user mode driver supporting hardware
+	  accelerated decoding, encoding, and video post processing for
+	  GEN based graphics hardware.
 
 comment "intel-mediadriver needs libva w/ Intel(R) QuickSync support"
-    depends on !BR2_PACKAGE_LIBVA_INTEL_QSV
+	  depends on !BR2_PACKAGE_LIBVA_INTEL_QSV
 
 comment "intel-mediadriver needs libx11"
-    depends on !BR2_PACKAGE_XLIB_LIBX11 
+	  depends on !BR2_PACKAGE_XLIB_LIBX11

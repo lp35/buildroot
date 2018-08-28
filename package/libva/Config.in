@@ -23,12 +23,12 @@ config BR2_PACKAGE_LIBVA_INTEL_QSV
 	depends on BR2_TOOLCHAIN_USES_GLIBC
 	depends on BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_14
 	help
-	  Use Intel(R)'s custom version of libva that enables Intel QuickSync 
-	  Video encoding/decoding feature on Intel(R) processors.
+	  Use Intels custom version of libva that enables Intel
+	  QuickSync video encoding/decoding feature on Intel(R)
+	  processors.
 
 comment "Intel(R) QuickSync Video support needs a glibc toolchain and GNU/Linux Kernel >= 4.14 at least"
-    depends on !BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_14 || !BR2_TOOLCHAIN_USES_GLIBC
-
+	depends on !BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_14 || !BR2_TOOLCHAIN_USES_GLIBC
 endif
 
 comment "libva needs a toolchain w/ threads, dynamic library"

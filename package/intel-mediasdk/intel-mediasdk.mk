@@ -15,8 +15,6 @@ INTEL_MEDIASDK_LICENSE = MIT
 INTEL_MEDIASDK_LICENSE_FILES = COPYING
 
 INTEL_MEDIASDK_INSTALL_STAGING = YES
-INTEL_MEDIASDK_INSTALL_TARGET = YES
-
 INTEL_MEDIASDK_DEPENDENCIES += intel-mediadriver
 INTEL_MEDIASDK_DEPENDENCIES += libdrm
 
@@ -33,7 +31,7 @@ endef
 
 define INTEL_MEDIASDK_INSTALL_TARGET_CMDS
     # Copy runtimes.
-    cp ${STAGING_DIR}/usr/lib/libmfxhw64-p.so.1.26 $(TARGET_DIR)/lib
+	cp ${STAGING_DIR}/usr/lib/libmfxhw64-p.so.1.26 $(TARGET_DIR)/lib
 
 	# Create a link so all application will be able to execute mfx code.
 	ln -sf libmfxhw64-p.so.1.26 $(TARGET_DIR)/lib/libmfxhw64.so
